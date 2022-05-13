@@ -7,3 +7,15 @@
 ### Up volumes
 
 `docker-compose exec php php -vdocker-compose run composer -vdocker-compose run npm -vdocker-compose run mysql -v`
+
+### Create new project laravel 
+
+`cd src docker-compose run composer create-project laravel/laravel .`
+
+### Check version
+
+`docker-compose exec php php artisan -V`
+
+### Run
+
+`docker-compose exec php php artisan serve`
