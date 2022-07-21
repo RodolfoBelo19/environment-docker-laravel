@@ -1,4 +1,4 @@
-FROM php:8.0.2-fpm-alpine
+FROM php:7.2-fpm-alpine
 WORKDIR /var/www/html
 RUN apk add --no-cache --virtual .build-deps \
         $PHPIZE_DEPS \
@@ -26,7 +26,7 @@ RUN apk add --no-cache --virtual .build-deps \
     && apk update \
     && docker-php-ext-enable imagick \
     && docker-php-ext-configure gd \
-    && docker-php-ext-install \
+    && docker-php-ext-install iconv \
         bcmath \
         curl \
         iconv \
